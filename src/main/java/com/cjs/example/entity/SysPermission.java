@@ -33,4 +33,60 @@ public class SysPermission implements Serializable {
      * 父菜单ID
      */
     private Long pid;
+
+    public SysPermission() {
+    }
+
+    public SysPermission(Long id, String name, String code, Integer type, String url, Integer sort, Long pid) {
+        this.id = id;
+        this.name = name;
+        this.code = code;
+        this.type = type;
+        this.url = url;
+        this.sort = sort;
+        this.pid = pid;
+    }
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getCode() {
+        return code;
+    }
+    public void setCode(String code) {
+        this.code = code;
+    }
+    public Integer getType() {
+        return type;
+    }
+    public void setType(Integer type) {
+        this.type = type;
+    }
+    public String getUrl() {
+        return url;
+    }
+    public void setUrl(String url) {
+        this.url = url;
+    }
+    public Integer getSort() {
+        return sort;
+    }
+    public void setSort(Integer sort) {
+        this.sort = sort;
+    }
+    public Long getPid() {
+        return pid;
+    }
+    public void setPid(Long pid) {
+        this.pid = pid;
+    }
 }

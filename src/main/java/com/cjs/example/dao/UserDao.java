@@ -41,7 +41,7 @@ public class UserDao {
     }
 
     public SysUser selectByName(String username) {
-        log.info("从数据库中查询用户");
+        //log.info("从数据库中查询用户");
         if ("zhangsan".equals(username)) {
             SysUser sysUser = new SysUser("zhangsan", "$2a$10$EIfFrWGINQzP.tmtdLd2hurtowwsIEQaPFR9iffw2uSKCOutHnQEm");
             sysUser.setRoleList(Arrays.asList(admin, developer));
