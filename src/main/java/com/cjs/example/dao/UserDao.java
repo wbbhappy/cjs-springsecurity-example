@@ -5,7 +5,6 @@ import com.cjs.example.entity.SysRole;
 import com.cjs.example.entity.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
-
 import java.util.Arrays;
 
 @Slf4j
@@ -54,5 +53,4 @@ public class UserDao {
         }
         return null;
     }
-
 }

@@ -24,7 +24,6 @@ public class RedisConfig extends CachingConfigurerSupport {
     @Autowired
     private RedisConnectionFactory redisConnectionFactory;
 
-
     @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
         Jackson2JsonRedisSerializer<Object> serializer = new Jackson2JsonRedisSerializer<Object>(Object.class);
@@ -65,5 +64,4 @@ public class RedisConfig extends CachingConfigurerSupport {
         serializer.setObjectMapper(objectMapper);
         return RedisCacheConfiguration.defaultCacheConfig().serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(serializer));
     }
-
 }

@@ -15,7 +15,6 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
     /**
      * 个人中心
      */
@@ -31,5 +30,4 @@ public class UserController {
         SysUser sysUser = userService.getUserByName("zhangsan");
         return sysUser.toString();
     }
-
 }

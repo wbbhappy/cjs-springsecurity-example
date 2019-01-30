@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class LoginController {
-
     // Login form
     @RequestMapping("/login.html")
     public String login() {
@@ -19,5 +18,4 @@ public class LoginController {
         model.addAttribute("loginError", true);
         return "login.html";
     }
-
 }

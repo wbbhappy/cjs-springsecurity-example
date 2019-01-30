@@ -21,8 +21,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private MyUserDetailsService myUserDetailsService;
 
-
-    @Override
     protected void configure(HttpSecurity http) throws Exception {
         //  允许所有用户访问"/"和"/index.html"
         http.authorizeRequests()
@@ -37,12 +35,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/index.html");
     }
 
-    @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/css/**");
     }
 
-    @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(myUserDetailsService).passwordEncoder(passwordEncoder());
     }
@@ -51,5 +47,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
 }

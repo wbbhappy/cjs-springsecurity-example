@@ -2,7 +2,6 @@ package com.cjs.example.entity;
 
 import lombok.Data;
 import lombok.ToString;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -11,17 +10,14 @@ import java.util.List;
 public class SysRole implements Serializable {
 
     private Long id;
-
     /**
      * 角色编码
      */
     private String roleCode;
-
     /**
      * 角色名称
      */
     private String roleName;
-
     /**
      * 角色拥有的权限
      */

@@ -6,14 +6,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.stereotype.Component;
-
 /**
  * 调试
  * 看一下是不是自己配置的那个Bean
  */
 @Component
 public class MyApplicationContext implements ApplicationContextAware {
-    @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         Object obj = applicationContext.getBean(UserService.class);
         RedisCacheManager redisCacheManager = applicationContext.getBean(RedisCacheManager.class);
